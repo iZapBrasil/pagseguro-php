@@ -126,7 +126,7 @@ class PagSeguroPreApprovalSearchService
      * @param null $finalDate
      * @return array
      */
-    private function buildParams($pageNumber, $maxPageResults, $initialDate, $finalDate = null, $reference = null)
+    private static function buildParams($pageNumber, $maxPageResults, $initialDate, $finalDate = null, $reference = null)
     {
         $params = array(
             'initialDate' => PagSeguroHelper::formatDate($initialDate),
@@ -362,7 +362,7 @@ class PagSeguroPreApprovalSearchService
      * @return null|PagSeguroParserData
      * @throws PagSeguroServiceException
      */
-    private function getResult($connection, $code = null)
+    private static function getResult($connection, $code = null)
     {
 
         $httpStatus = new PagSeguroHttpStatus($connection->getStatus());

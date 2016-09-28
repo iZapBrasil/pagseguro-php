@@ -5,12 +5,11 @@ Biblioteca de integração PagSeguro para PHP
 Este é um fork da biblioteca original do PagSeguro (pagseguro/php 2.7.1).
 O objetivo é apenas a correção de erros críticos até a migração para a nova versão.
 ```
-
 ---
-
 
 > **ESTA BIBLIOTECA ESTÁ DEPRECIADA**. Por favor, utilize a nova versão disponível em https://github.com/pagseguro/php3
 
+---
 
 [![Code Climate](https://codeclimate.com/github/pagseguro/php/badges/gpa.svg)](https://codeclimate.com/github/pagseguro/php)
 

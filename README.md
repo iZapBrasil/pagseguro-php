@@ -1,9 +1,15 @@
 Biblioteca de integração PagSeguro para PHP
 ===========================================
 
-### `Este é um fork da biblioteca original do pagseguro (que foi depreciada, conforme mensagem abaixo) com o objetivo de corrigir alguns erros críticos até a completa migração para a nova versão.`
+```
+Este é um fork da biblioteca original do PagSeguro (pagseguro/php 2.7.1).
+O objetivo é apenas a correção de erros críticos até a migração para a nova versão.
+```
 
-> `ESTA BIBLIOTECA ESTÁ DEPRECIADA. Por favor, utilize a nova versão disponível em` https://github.com/pagseguro/php3
+---
+
+
+> **ESTA BIBLIOTECA ESTÁ DEPRECIADA**. Por favor, utilize a nova versão disponível em https://github.com/pagseguro/php3
 
 
 [![Code Climate](https://codeclimate.com/github/pagseguro/php/badges/gpa.svg)](https://codeclimate.com/github/pagseguro/php)
@@ -79,6 +85,9 @@ Caso tenha dúvidas ou precise de suporte, acesse nosso [fórum].
 
 Changelog
 ---------
+2.7.2
+ - Fix non-static methods called statically
+
 2.7.1
  - Possibilidade de definir parcelamento sem juros.
  - Ajustes em geral.

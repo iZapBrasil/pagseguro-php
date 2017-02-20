@@ -117,7 +117,7 @@ class PagSeguroItem
      */
     public function setDescription($description)
     {
-        $this->description = PagSeguroHelper::formatString($description, 255);
+        $this->description = PagSeguroHelper::formatString($description, 100);
     }
 
     /***

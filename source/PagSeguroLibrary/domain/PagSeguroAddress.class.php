@@ -108,29 +108,31 @@ class PagSeguroAddress
      */
     public function __construct(array $data = null)
     {
-        if (isset($data['postalCode'])) {
-            $this->postalCode = $data['postalCode'];
-        }
-        if (isset($data['street'])) {
-            $this->street = $data['street'];
-        }
-        if (isset($data['number'])) {
-            $this->number = $data['number'];
-        }
-        if (isset($data['complement'])) {
-            $this->complement = $data['complement'];
-        }
-        if (isset($data['district'])) {
-            $this->district = $data['district'];
-        }
-        if (isset($data['city'])) {
-            $this->city = $data['city'];
-        }
-        if (isset($data['state'])) {
-            $this->state = $data['state'];
-        }
-        if (isset($data['country'])) {
-            $this->country = $data['country'];
+        if ($data) {
+            if (isset($data['postalCode'])) {
+                $this->setPostalCode($data['postalCode']);
+            }
+            if (isset($data['street'])) {
+                $this->setStreet($data['street']);
+            }
+            if (isset($data['number'])) {
+                $this->setNumber($data['number']);
+            }
+            if (isset($data['complement'])) {
+                $this->setComplement($data['complement']);
+            }
+            if (isset($data['district'])) {
+                $this->setDistrict($data['district']);
+            }
+            if (isset($data['city'])) {
+                $this->setCity($data['city']);
+            }
+            if (isset($data['state'])) {
+                $this->setState($data['state']);
+            }
+            if (isset($data['country'])) {
+                $this->setCountry($data['country']);
+            }
         }
     }
 
@@ -213,7 +215,7 @@ class PagSeguroAddress
      */
     public function setStreet($street)
     {
-        $this->street = $street;
+        $this->street = PagSeguroHelper::formatString($street, 80, '');
     }
 
     /***
@@ -222,7 +224,7 @@ class PagSeguroAddress
      */
     public function setNumber($number)
     {
-        $this->number = $number;
+        $this->number = PagSeguroHelper::formatString((string)$number, 20, '');
     }
 
     /***
@@ -231,7 +233,7 @@ class PagSeguroAddress
      */
     public function setComplement($complement)
     {
-        $this->complement = $complement;
+        $this->complement = PagSeguroHelper::formatString($complement, 40, '');
     }
 
     /***
@@ -240,7 +242,7 @@ class PagSeguroAddress
      */
     public function setDistrict($district)
     {
-        $this->district = $district;
+        $this->district = PagSeguroHelper::formatString($district, 60, '');
     }
 
     /***
@@ -249,7 +251,7 @@ class PagSeguroAddress
      */
     public function setCity($city)
     {
-        $this->city = $city;
+        $this->city = PagSeguroHelper::formatString($city, 60, '');
     }
 
     /***
@@ -272,7 +274,7 @@ class PagSeguroAddress
 
     /***
      * Handle the state to pass in format expected in PagSeguro
-     * @param type $defaultState
+     * @param string $defaultState
      * @return string
      */
     private function treatState($defaultState)

@@ -83,4 +83,12 @@ class PagSeguroError
     {
         $this->message = $message;
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function __toString()
+    {
+        return sprintf('[%s] - %s', $this->getCode(), $this->getMessage());
+    }
 }

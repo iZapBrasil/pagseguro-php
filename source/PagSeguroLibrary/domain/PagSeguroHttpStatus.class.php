@@ -87,4 +87,12 @@ class PagSeguroHttpStatus
             return false;
         }
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function __toString()
+    {
+        return sprintf('[HTTP %s] - %s', $this->getStatus(), $this->getType());
+    }
 }

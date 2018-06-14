@@ -96,6 +96,7 @@ class PagSeguroHttpConnection
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_HEADER => false,
             CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_SSLVERSION => 6, /* CURL_SSLVERSION_TLSv1_2 */
             CURLOPT_CONNECTTIMEOUT => $timeout,
             //CURLOPT_TIMEOUT => $timeout
             );

@@ -84,6 +84,16 @@ Caso tenha dúvidas ou precise de suporte, acesse nosso [fórum].
 
 Changelog
 ---------
+2.7.5
+ - Added support for TLS 1.2
+
+2.7.4
+ - Improves class conversion to string
+
+2.7.3
+ - Fix address fields maximum length
+ - Fix item description maximum length
+
 2.7.2
  - Fix non-static methods called statically
 
